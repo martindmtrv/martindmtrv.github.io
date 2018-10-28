@@ -16,6 +16,11 @@ body {
   font-family: 'HelveticaNeue';
 }
 
+button {
+  margin: auto;
+  display:block;
+}
+
 section {
   width: 100%;
   padding: 0 7%;
@@ -45,6 +50,15 @@ section:nth-of-type(2n) {
 
 h1 {
   font-size: 3em;
+  display: block;
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  font-family: "gravity-book";
+}
+
+h2 {
+  font-size: 2em;
   display: block;
   color: white;
   font-weight: 300;
