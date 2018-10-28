@@ -17,7 +17,7 @@ function copy_clipboard(){
   }
   //get the 'code' query parameter
   const code = $_GET['code'];
-  // copy this code to the clipboard
+  // copy this code to the clipboard make text area off screen select and copy text
   const copyClipboard = code;
   const el = document.createElement('textarea');
   el.value = copyClipboard;
@@ -25,5 +25,14 @@ function copy_clipboard(){
   el.select();
   document.execCommand('copy',false,copyClipboard);
   document.body.removeChild(el);
-  document.getElementById('success').innerHTML = 'Copied to Clipboard!';
+
+  // show success
+  document.getElementById('success').innerHTML = 'Copied to Clipboard!<br>Window will close automatically in 3 seconds...';
+
+  var delayInMilliseconds = 3000; //5 second
+
+  setTimeout(function() {
+    window.close()
+    //your code to be executed after 5 seconds
+  }, delayInMilliseconds);
 }
