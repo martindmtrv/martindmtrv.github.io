@@ -29,7 +29,7 @@ function main(){
             async: true
         });
       console.log(test);
-      updatedStr += martRepos.repositories[i].name + "<br>" + test.toString() + "<br><br>"
+      updatedStr += martRepos.repositories[i].name + "<br>" + test.successText + "<br><br>"
     }
     document.getElementById('git').innerHTML = updatedStr
   })
