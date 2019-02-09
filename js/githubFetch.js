@@ -25,10 +25,6 @@ function main(){
                          },
             async: false
         });
-      // for testing purposes (remove when uploading)
-      //if (projects < 2){
-        //test.statusText = "success";
-      //}
       if (test.statusText == "success"){
         description = test.responseText;
         description = $(description).find("h2.project-tagline");
@@ -37,7 +33,7 @@ function main(){
         } else{
           description = description[0].innerText;
         }
-        updatedStr += "<div class = \"column\"><h4>" + martRepos.repositories[i].name + "</h4>" + "<br><p>"+ description + "</p><a href=\"https://github.com/martindmtrv/"+ martRepos.repositories[i].name  + "\"><img src=\"view-on-github.png\"></a></div>";
+        updatedStr += "<div class = \"column\"><h4>" + martRepos.repositories[i].name + "</h4><p>"+ description + "</p><a href=\"https://github.com/martindmtrv/"+ martRepos.repositories[i].name  + "\"><img src=\"view-on-github.png\"></a></div>";
         projects++;
       }
       else{
