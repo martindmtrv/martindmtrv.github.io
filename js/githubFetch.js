@@ -31,9 +31,8 @@ function main(){
             dataType: "json",
             async: true
         });
-      console.log(test["statusText"]);
-      alert(test);
-      updatedStr += martRepos.repositories[i].name + "<br>" + test["statusText"] + "<br><br>"
+      console.log(test.statusText);
+      updatedStr += martRepos.repositories[i].name + "<br>" + test.statusText + "<br><br>"
     }
     document.getElementById('git').innerHTML = updatedStr
   })
