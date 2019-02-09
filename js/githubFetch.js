@@ -18,14 +18,10 @@ function main(){
             statusCode: {
                           404: function ()
                              {
-                                alert("error");
+                                console.log("error");
                              }
                          },
-            success: function(){
-              alert("Success!");
-            },
-            dataType: "json",
-            async: true
+            async: false
         });
       console.log(test);
       console.log(test.statusText);
