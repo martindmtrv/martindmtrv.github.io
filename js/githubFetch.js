@@ -6,10 +6,11 @@ function main(){
     if(err) {
       throw "outch ..."
     }
-    console.log("Repositories", martRepos.repositories);
+
     var updatedStr = "";
     var test;
     var projects = 0;
+    var description = "";
     for (i = 0; i<martRepos.repositories.length; i++){
       test = $.ajax(
         {
@@ -19,13 +20,19 @@ function main(){
             statusCode: {
                           404: function ()
                              {
-                                console.log("error");
+                                console.log("404");
                              }
                          },
             async: false
         });
+      // for testing purposes (remove when uploading)
+      if (projects < 2){
+        test.statusText = "success";
+      }
       if (test.statusText == "success"){
-        updatedStr += "<div class = \"column\"><h4>" + martRepos.repositories[i].name + "</h4><br><p>" + test.statusText + "<br><br></p><a href=\"https://github.com/martindmtrv/"+ martRepos.repositories[i].name  + "\">View project on GitHub</a></div>";
+        description = test.find("h2.project-tagline");
+        console.log(description);
+        updatedStr += "<div class = \"column\"><h4>" + martRepos.repositories[i].name + "</h4><br><p>" + test.statusText + "<br><br>" + description + "</p><a href=\"https://github.com/martindmtrv/"+ martRepos.repositories[i].name  + "\">View project on GitHub</a></div>";
         projects++;
       }
       else{
@@ -43,3 +50,5 @@ function main(){
     
   })
 }
+
+main();

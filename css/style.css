@@ -159,6 +159,11 @@ span {
     bottom: 8vh;
 }
 
+#other{
+    position: relative;
+    bottom: 4vh;
+}
+
 
 /* tables */
 /* Create three equal columns that floats next to each other */
