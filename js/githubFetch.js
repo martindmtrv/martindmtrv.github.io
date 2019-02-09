@@ -26,11 +26,11 @@ function main(){
             async: false
         });
       // for testing purposes (remove when uploading)
-      if (projects < 2){
-        test.statusText = "success";
-      }
+      //if (projects < 2){
+        //test.statusText = "success";
+      //}
       if (test.statusText == "success"){
-        description = test.find("h2.project-tagline");
+        description = test.filter("h2.project-tagline");
         console.log(description);
         updatedStr += "<div class = \"column\"><h4>" + martRepos.repositories[i].name + "</h4><br><p>" + test.statusText + "<br><br>" + description + "</p><a href=\"https://github.com/martindmtrv/"+ martRepos.repositories[i].name  + "\">View project on GitHub</a></div>";
         projects++;
