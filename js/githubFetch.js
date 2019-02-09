@@ -8,9 +8,9 @@ function main(){
     }
     console.log("Repositories", martRepos.repositories);
     var updatedStr = "";
-    window.test = false;
+    var test;
     for (i = 0; i<martRepos.repositories.length; i++){
-      $.ajax(
+      test = $.ajax(
         {
             type: "get",
             url: martRepos.repositories[i].name,
@@ -28,10 +28,11 @@ function main(){
               test = true;
               return true;
             },
+            dataType: "json",
             async: true
         });
-      console.log(test);
-      updatedStr += martRepos.repositories[i].name + "<br>" + test.toString() + "<br><br>"
+      console.log(test['successText']);
+      updatedStr += martRepos.repositories[i].name + "<br>" + test['successText'] + "<br><br>"
     }
     document.getElementById('git').innerHTML = updatedStr
   })
