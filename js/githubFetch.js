@@ -18,19 +18,16 @@ function main(){
             statusCode: {
                           404: function ()
                              {
-                                alert(false);
-                                test = false;
-                                return false;
+                                alert("error");
                              }
                          },
             success: function(){
-              alert(true);
-              test = true;
-              return true;
+              alert("Success!");
             },
             dataType: "json",
             async: true
         });
+      console.log(test);
       console.log(test.statusText);
       updatedStr += martRepos.repositories[i].name + "<br>" + test.statusText + "<br><br>"
     }
