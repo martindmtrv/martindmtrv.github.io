@@ -30,8 +30,8 @@ function main(){
         //test.statusText = "success";
       //}
       if (test.statusText == "success"){
-        description = test.filter("h2.project-tagline");
-        console.log(description);
+        description = test.responseText;
+        console.log(test);
         updatedStr += "<div class = \"column\"><h4>" + martRepos.repositories[i].name + "</h4><br><p>" + test.statusText + "<br><br>" + description + "</p><a href=\"https://github.com/martindmtrv/"+ martRepos.repositories[i].name  + "\">View project on GitHub</a></div>";
         projects++;
       }
