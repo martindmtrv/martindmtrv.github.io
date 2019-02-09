@@ -8,10 +8,9 @@ function main(){
     }
     console.log("Repositories", martRepos.repositories);
     var updatedStr = "";
-    var test;
+    var test = false;
     for (i = 0; i<martRepos.repositories.length; i++){
-      test = true;
-      $.ajax(
+      test = $.ajax(
         {
             type: "get",
             url: martRepos.repositories[i].name,
@@ -19,9 +18,14 @@ function main(){
             statusCode: {
                           404: function ()
                              {
-                                test = false;
+                                alert(false);
+                                return false;
                              }
                          },
+            success: function(){
+              alert(true);
+              return true;
+            },
             async: true
         });
       updatedStr += martRepos.repositories[i].name + "<br>" + test + "<br><br>"
