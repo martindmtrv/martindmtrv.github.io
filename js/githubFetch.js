@@ -37,7 +37,7 @@ function main(){
         } else{
           description = description[0].innerText;
         }
-        updatedStr += "<div class = \"column\"><h4>" + martRepos.repositories[i].name + "</h4><br><p>" + test.statusText + "<br><br>" + description + "</p><a href=\"https://github.com/martindmtrv/"+ martRepos.repositories[i].name  + "\">View project on GitHub</a></div>";
+        updatedStr += "<div class = \"column\"><h4>" + martRepos.repositories[i].name + "</h4>" + "<br><p>"+ description + "</p><a href=\"https://github.com/martindmtrv/"+ martRepos.repositories[i].name  + "\"><img src=\"view-on-github.png\"></a></div>";
         projects++;
       }
       else{

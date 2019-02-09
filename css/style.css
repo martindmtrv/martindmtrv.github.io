@@ -189,8 +189,6 @@ span {
 }
 
 .column a{
-    position: absolute;
-    bottom: 5px;
     text-decoration: none;
     color: black;
 }
