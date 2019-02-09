@@ -30,19 +30,25 @@ section {
     padding: 0px 7%;
     margin: 0px;
 }
+
+section h1{
+    color: white;
+    font-size: 3em;
+}
 section:nth-of-type(2n) {
     color: rgb(0,0,0);
     background-color: rgb(255, 255, 255);
+    font-size: 1em;
 }
 
 body{
     margin: 0px;
 }
 
-h1 {
+section:nth-of-type(2n) h1 {
     font-size: 3em;
     display: block;
-    color: white;
+    color: black;
     font-weight: 300;
     text-align: center;
     font-family: "gravity-book";
@@ -56,9 +62,8 @@ p {
     font-family: "gravity-light";
     vertical-align: middle;
 }
-a {
+.scroll a {
     padding-top: 50px;
-
     text-decoration: none;
     color: white;
   }

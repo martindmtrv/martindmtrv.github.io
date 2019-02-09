@@ -25,8 +25,8 @@ function main(){
         });
       console.log(test);
       console.log(test.statusText);
-      updatedStr += martRepos.repositories[i].name + "<br>" + test.statusText + "<br><br>"
+      updatedStr += "<div class = \"column\"><h1>" + martRepos.repositories[i].name + "</h1><br><p>" + test.statusText + "<br><br></p><a href=\"https://github.com/martindmtrv/"+ martRepos.repositories[i].name  + "\">View project on GitHub</a>"
     }
-    document.getElementById('git').innerHTML = updatedStr
+    document.getElementById("response").innerHTML = updatedStr
   })
 }
