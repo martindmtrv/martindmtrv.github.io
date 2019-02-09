@@ -8,7 +8,7 @@ function main(){
     }
     console.log("Repositories", martRepos.repositories);
     var updatedStr = "";
-    var test = false;
+    window.test = false;
     for (i = 0; i<martRepos.repositories.length; i++){
       $.ajax(
         {
