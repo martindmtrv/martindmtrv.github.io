@@ -23,9 +23,12 @@ function main(){
                          },
             async: false
         });
-      console.log(test);
-      console.log(test.statusText);
-      updatedStr += "<div class = \"column\"><h1>" + martRepos.repositories[i].name + "</h1><br><p>" + test.statusText + "<br><br></p><a href=\"https://github.com/martindmtrv/"+ martRepos.repositories[i].name  + "\">View project on GitHub</a>"
+      if (test.statusText == "success"){
+        updatedStr += "<div class = \"column\"><h1>" + martRepos.repositories[i].name + "</h1><br><p>" + test.statusText + "<br><br></p><a href=\"https://github.com/martindmtrv/"+ martRepos.repositories[i].name  + "\">View project on GitHub</a></div>"
+      }
+      else{
+        document.getElementById("other").innerHTML += "<p>" + martRepos.repositories[i].name + "<br><br></p>"
+      }
     }
     document.getElementById("response").innerHTML = updatedStr
   })
