@@ -10,7 +10,8 @@ function main(){
     var updatedStr = "";
     var test;
     for (i = 0; i<martRepos.repositories.length; i++){
-      test = $.ajax(
+      test = true;
+      $.ajax(
         {
             type: "get",
             url: martRepos.repositories[i].name,
@@ -18,7 +19,7 @@ function main(){
             statusCode: {
                           404: function ()
                              {
-                                return false;
+                                test = false;
                              }
                          },
             async: true
