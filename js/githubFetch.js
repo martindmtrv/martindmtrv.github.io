@@ -31,7 +31,12 @@ function main(){
       //}
       if (test.statusText == "success"){
         description = test.responseText;
-        console.log(test);
+        description = $(description).find("h2.project-tagline");
+        if (description[0] === undefined){
+          description = "A cool project description";
+        } else{
+          description = description[0].innerText;
+        }
         updatedStr += "<div class = \"column\"><h4>" + martRepos.repositories[i].name + "</h4><br><p>" + test.statusText + "<br><br>" + description + "</p><a href=\"https://github.com/martindmtrv/"+ martRepos.repositories[i].name  + "\">View project on GitHub</a></div>";
         projects++;
       }
