@@ -8,7 +8,7 @@ function main(){
     }
     console.log("Repositories", martRepos.repositories);
     var updatedStr = "";
-    var test = false;
+    var test;
     for (i = 0; i<martRepos.repositories.length; i++){
       test = $.ajax(
         {
@@ -29,7 +29,7 @@ function main(){
             async: true
         });
       console.log(test);
-      updatedStr += martRepos.repositories[i].name + "<br>" + test.successText + "<br><br>"
+      updatedStr += martRepos.repositories[i].name + "<br>" + test["successText"] + "<br><br>"
     }
     document.getElementById('git').innerHTML = updatedStr
   })
