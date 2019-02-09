@@ -1,31 +1,42 @@
 <html>
-<!-- Load stylesheet -->
-<link rel="stylesheet" type="text/css" href="css/style.css">
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-<!-- set the website title -->
-<title>Martin Dimitrov</title>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/underscore.js"></script>
+        <script src="js/gh3-master/gh3.min.js"></script>
+        <script src="js/githubFetch.js"></script>
 
-<section>
-  <div class="homeimg"></div>
-    <div class="content">
-      <h1>Martin Dimitrov</h1>
-      <p>Computer Science Student at Carleton University</p>
- </div>
-</section>
+        <title>Martin Dimitrov</title>
+    </head>
+    <section>
+        <div class = "splash">
+            <h1>Martin Dimitrov</h1>
 
-<section>
-  <div class="content">
-    <h1 class="contentBlack">Side projects</h1>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/underscore.js"></script>
-    <script src="js/gh3-master/gh3.js"></script>
-    <script src="js/githubFetch.js"></script>
-    <button onclick=main()>Click me to refresh from github</button>
-    <p id='git'>Haven't Loaded anything yet!</p>
- </div>
-</section>
-
-<footer>
-  Made by Martin Dimitrov
-</footer>
+            <div class = "terminal">
+                    <p class="line-1 anim-typewriter">"CS Undergrad at Carleton University"</p> 
+            </div>
+        </div>
+        <div class="scroll">
+            <a href="#projects"><span></span><br>Scroll</a>
+        </div>
+        
+        
+    </section>
+    <section>
+        <div class = "content" id = "projects">
+            <h1 style = "color: black;">Projects</h1>
+            <button onclick=main()>Click me to refresh from github</button>
+            <p id='git'>Haven't Loaded anything yet!</p>
+            
+            <div class = "row">
+                <div class = "column"><p>First</p></div>
+                <div class = "column"><p>Second</p></div>
+                <div class = "column"><p>Third</p></div>
+            </div>
+        </div>
+    </section>
+    
 </html>

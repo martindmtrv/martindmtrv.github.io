@@ -8,9 +8,22 @@ function main(){
     }
     console.log("Repositories", martRepos.repositories);
     var updatedStr = "";
+    var test;
     for (i = 0; i<martRepos.repositories.length; i++){
-      console.log(martRepos.repositories[i].name);
-      updatedStr += martRepos.repositories[i].name + "<br>"
+      test = $.ajax(
+        {
+            type: "get",
+            url: martRepos.repositories[i].name,
+            cache: false,
+            statusCode: {
+                          404: function ()
+                             {
+                                alert('page not found');
+                             }
+                         },
+            async: true
+        });
+      updatedStr += martRepos.repositories[i].name + "<br>" + test + "<br><br>"
     }
     document.getElementById('git').innerHTML = updatedStr
   })
