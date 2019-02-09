@@ -55,7 +55,7 @@ section:nth-of-type(2n) h1 {
 }
 
 p {
-    font-size: 1.5em;
+    font-size: 17px;
     font-weight: 500;
     color: #C3CAD9;
     text-align: center;
@@ -172,18 +172,25 @@ span {
     width: 33.33%;
     padding: 10px;
     height: 300px; /* Should be removed. Only for demonstration */
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
+}
+
+/* Clear floats after the columns */
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
-  
-  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
     .column {
-      width: 100%;
+        width: 100%;
     }
-  }
+}
+
+.column a{
+    position: absolute;
+    bottom: 5px;
+    text-decoration: none;
+    color: black;
+}
