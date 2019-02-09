@@ -28,7 +28,8 @@ function main(){
             },
             async: true
         });
-      updatedStr += martRepos.repositories[i].name + "<br>" + test + "<br><br>"
+      console.log(test);
+      updatedStr += martRepos.repositories[i].name + "<br>" + test.toString() + "<br><br>"
     }
     document.getElementById('git').innerHTML = updatedStr
   })
