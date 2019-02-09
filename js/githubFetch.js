@@ -18,7 +18,7 @@ function main(){
             statusCode: {
                           404: function ()
                              {
-                                alert('page not found');
+                                return false;
                              }
                          },
             async: true
