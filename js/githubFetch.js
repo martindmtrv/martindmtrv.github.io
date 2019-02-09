@@ -24,9 +24,6 @@ function main(){
                          },
             async: false
         });
-      if (projects < 2){
-        test.statusText = "success";
-      }
       if (test.statusText == "success"){
         updatedStr += "<div class = \"column\"><h4>" + martRepos.repositories[i].name + "</h4><br><p>" + test.statusText + "<br><br></p><a href=\"https://github.com/martindmtrv/"+ martRepos.repositories[i].name  + "\">View project on GitHub</a></div>";
         projects++;
