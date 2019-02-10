@@ -157,8 +157,9 @@ span {
 }
 .scroll{
     display: inline-block;
-    position: relative;
-    top: 20vh;
+    position: absolute;
+    bottom: 5vh;
+    margin-left: -26.07px;
 }
 
 #other{
