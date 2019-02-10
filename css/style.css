@@ -21,6 +21,7 @@ html{
 
 section {
     width: 100%;
+    position: relative;
     text-align: center;
     max-width: none;
     color: rgb(255,255,255);
@@ -33,7 +34,7 @@ section {
 
 section h1{
     color: white;
-    font-size: 9vh;
+    font-size: 80px;
 }
 section:nth-of-type(2n) {
     color: rgb(0,0,0);
@@ -66,7 +67,7 @@ p {
     padding-top: 50px;
     text-decoration: none;
     color: white;
-    font-size: 3vh;
+    font-size: 20px;
   }
 span {
     position: absolute;
@@ -112,7 +113,7 @@ span {
     top: 50%;
     margin: 0 auto;
     border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 180%;
+    font-size: 5.1vw;
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%);    
@@ -124,7 +125,7 @@ span {
 }
 @keyframes typewriter{
   from{width: 0;}
-  to{width: 493px;}
+  to{width: 86vw;}
 }
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(255,255,255,.75);}
@@ -143,6 +144,7 @@ span {
 .splash{
     display: inline-block;
     position: relative;
+    text-align: center;
     width: 100%;
     top: 50%;
     transform: translateY(-50%);
@@ -155,9 +157,8 @@ span {
 }
 .scroll{
     display: inline-block;
-    position: absolute;
-    left: 46.645vw;
-    bottom: 8vh;
+    position: relative;
+    top: 20vh;
 }
 
 #other{
