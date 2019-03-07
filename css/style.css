@@ -140,6 +140,12 @@ span {
     bottom: 5vh;
 }
 
+.navbar a{
+    text-decoration: none;
+    color: white;
+    margin: 5vw 5vw 0 0;
+}
+
 /* divs */
 .splash{
     display: inline-block;
@@ -147,7 +153,17 @@ span {
     text-align: center;
     width: 100%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(28vh);
+}
+
+#footer{
+    padding-bottom: 2vh;
+}
+
+.navbar{
+    text-align: right;
+    padding-top: 3vh;
+
 }
 
 .content{
