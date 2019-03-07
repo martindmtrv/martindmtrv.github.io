@@ -230,6 +230,10 @@ span {
     font-size: 17px;
 }
 
+#right{
+    float: right;
+}
+
 .topnav a:hover {
     background-color: #ddd;
     color: black;
@@ -257,6 +261,9 @@ span {
 @media screen and (max-width: 600px) {
     .topnav.responsive {
         position: fixed;
+    }
+    #right{
+        float: none;
     }
     .topnav.responsive .icon {
         position: absolute;
