@@ -146,7 +146,7 @@ span {
     position: absolute;
     text-align: center;
     width: 100%;
-    bottom: 28vh;
+    bottom: 35vh;
 }
 .splash h1{
     margin: 0 0 10vh 0;
@@ -154,16 +154,6 @@ span {
 
 #footer{
     padding-bottom: 2vh;
-}
-
-.navbar{
-    text-align: left;
-    background-color: rgb(55, 59, 75);
-    padding-top: 3vh;
-    
-    width: 100%;
-    padding-bottom: 3vh;
-    opacity: 0.5;
 }
 
 .content{
@@ -218,10 +208,11 @@ span {
 
 /* navbar */
 .topnav {
+    z-index: 9;
     overflow: hidden;
-    background-color: rgb(61, 61, 61);
-    opacity: 0.5;
-    position: relative;
+    background: rgba(61, 61, 61,0.5);
+    width: 100%;
+    position: fixed;
 }
 
 .topnav a {
@@ -260,7 +251,7 @@ span {
 
 @media screen and (max-width: 600px) {
     .topnav.responsive {
-        position: relative;
+        position: fixed;
     }
     .topnav.responsive .icon {
         position: absolute;
