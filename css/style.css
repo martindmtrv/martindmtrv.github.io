@@ -239,12 +239,8 @@ span {
     color: black;
 }
 
-.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
 .topnav .icon {
+    padding: 16px 16px;
     display: none;
 }
 
