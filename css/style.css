@@ -21,15 +21,13 @@ html{
 
 section {
     width: 100%;
-    position: relative;
+    display: inline-block;
     text-align: center;
     max-width: none;
     color: rgb(255,255,255);
     font-family: "gravity-book";
     background-color: rgb(55, 59, 68);
     height: 100vh;
-    padding: 0px 7%;
-    margin: 0px;
 }
 
 section h1{
@@ -143,7 +141,8 @@ span {
 .navbar a{
     text-decoration: none;
     color: white;
-    margin: 5vw 5vw 0 0;
+    margin: 3vw 3vw 3vw 0;
+    opacity: 1;
 }
 
 /* divs */
@@ -152,7 +151,6 @@ span {
     position: relative;
     text-align: center;
     width: 100%;
-    top: 50%;
     transform: translateY(28vh);
 }
 .splash h1{
@@ -164,15 +162,20 @@ span {
 }
 
 .navbar{
-    text-align: right;
+    background-color: rgb(55, 59, 75);
     padding-top: 3vh;
-
+    position: fixed;
+    width: 100%;
+    text-align: right;
+    padding-bottom: 3vh;
+    opacity: 0.5;
 }
 
 .content{
     display: inline-block;
     vertical-align: middle;    
     width: 100%;
+    padding-top: 3vh;
 }
 .scroll{
     display: inline-block;
