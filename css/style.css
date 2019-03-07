@@ -155,6 +155,9 @@ span {
     top: 50%;
     transform: translateY(28vh);
 }
+.splash h1{
+    margin: 0 0 10vh 0;
+}
 
 #footer{
     padding-bottom: 2vh;
