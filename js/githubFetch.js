@@ -35,8 +35,8 @@ function main(){
         }
         if (martRepos.repositories[i].name != "martindmtrv.github.io"){
           updatedStr += "<div class = \"column\"><h4>" + martRepos.repositories[i].name + "</h4><p>"+ description + "</p><a href=\"https://github.com/martindmtrv/"+ martRepos.repositories[i].name  + "\">View on GitHub</a></div>";
-        }
-        projects++;
+          projects++;
+        } 
       }
       else{
         document.getElementById("other").innerHTML += "<p>" + martRepos.repositories[i].name + "<br><br></p>";
