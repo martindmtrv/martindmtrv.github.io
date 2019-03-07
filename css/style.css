@@ -14,6 +14,9 @@
 * {
     box-sizing: border-box;
 }
+div{
+    text-align: center;
+}
 a{
     text-decoration: none;
     color: white;
@@ -183,11 +186,12 @@ span {
     padding: 10px;
     margin: 0 1.666666% 7%;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-    height: 300px; /* Should be removed. Only for demonstration */
+    height: 300px;
 }
 
 /* Clear floats after the columns */
 .row:after {
+    text-align: center;
     content: "";
     display: table;
     clear: both;
@@ -195,9 +199,10 @@ span {
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .column {
-        width: 100%;
+        width: 95vw;
+        margin: 0 2.5vw 10vh 2.5vw;
     }
 }
 
