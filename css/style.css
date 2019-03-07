@@ -14,6 +14,10 @@
 * {
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+    color: white;
+}
 
 html{
     scroll-behavior: smooth;
@@ -63,8 +67,6 @@ p {
 }
 .scroll a {
     padding-top: 50px;
-    text-decoration: none;
-    color: white;
     font-size: 20px;
   }
 span {
@@ -138,20 +140,13 @@ span {
     bottom: 5vh;
 }
 
-.navbar a{
-    text-decoration: none;
-    color: white;
-    margin: 3vw 3vw 3vw 0;
-    opacity: 1;
-}
-
 /* divs */
+
 .splash{
-    display: inline-block;
-    position: relative;
+    position: absolute;
     text-align: center;
     width: 100%;
-    transform: translateY(28vh);
+    bottom: 28vh;
 }
 .splash h1{
     margin: 0 0 10vh 0;
@@ -162,11 +157,11 @@ span {
 }
 
 .navbar{
+    text-align: left;
     background-color: rgb(55, 59, 75);
     padding-top: 3vh;
-    position: fixed;
+    
     width: 100%;
-    text-align: right;
     padding-bottom: 3vh;
     opacity: 0.5;
 }
@@ -175,7 +170,7 @@ span {
     display: inline-block;
     vertical-align: middle;    
     width: 100%;
-    padding-top: 3vh;
+    padding-top: 10vh;
 }
 .scroll{
     display: inline-block;
@@ -219,4 +214,62 @@ span {
 .column a{
     text-decoration: none;
     color: black;
+}
+
+/* navbar */
+.topnav {
+    overflow: hidden;
+    background-color: rgb(61, 61, 61);
+    opacity: 0.5;
+    position: relative;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
 }

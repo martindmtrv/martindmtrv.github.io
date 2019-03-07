@@ -3,23 +3,26 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/underscore.js"></script>
         <script src="js/gh3-master/gh3.min.js"></script>
         <script src="js/githubFetch.js"></script>
         <script src="js/scrollTop.js"></script>
+        <script src="js/navBar.js"></script>
 
         <title>Martin Dimitrov</title>
     </head>
     <section>
-        <header>
-        <div class = "navbar">
-                <a onclick=topFunction() href="#">Home</a>
-                <a href = "Martin_Resume2019.pdf" target="_blank">Resume</a>
-                <a href = "https://github.com/martindmtrv">Github</a>
+        <div class = "topnav" id="myTopnav">
+            <a onclick=topFunction() id="home" href="#">Home</a>
+            <a href = "Martin_Resume2019.pdf" id="second" target="_blank">Resume</a>
+            <a href = "https://github.com/martindmtrv">Github</a>
+            <a href="javascript:void(0);" class="icon" onclick="navBar()">
+                    <i class="fa fa-bars"></i>
+            </a>      
         </div>
-    </header>
         <div class = "splash">
             <h1>Martin Dimitrov</h1>
             <div class = "terminal">
