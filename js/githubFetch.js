@@ -27,13 +27,13 @@ function main(){
         });
       if (test.statusText == "success"){
         description = test.responseText;
-        description = $(description).find("h2.project-tagline");
+        description = $(description).find("p");
         if (description[0] === undefined){
           description = "A cool project description";
         } else{
           description = description[0].innerText;
         }
-        if (martRepos.repositories[i].name != "martindmtrv.github.io"){
+        if (martRepos.repositories[i].name != "martindmtrv.github.io" && martRepos.repositories[i].name != "spaghetti-code"){
           updatedStr += "<div class = \"column\"><h4>" + martRepos.repositories[i].name + "</h4><p>"+ description + "</p><a href=\"https://github.com/martindmtrv/"+ martRepos.repositories[i].name  + "\">View on GitHub</a></div>";
           projects++;
         } 
