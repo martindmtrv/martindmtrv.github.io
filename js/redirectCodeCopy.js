@@ -32,7 +32,8 @@ function copy_clipboard(){
     var delayInMilliseconds = 3000; //3 second
   
     setTimeout(function() {
-      window.close()
+        window.open('','_parent','');
+        window.close();
       //your code to be executed after 3 seconds
     }, delayInMilliseconds);
   }
