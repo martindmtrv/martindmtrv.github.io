@@ -145,6 +145,14 @@ span {
 
 /* divs */
 
+.end{
+    position: absolute;
+    font-size: 2em;
+    text-align: center;
+    top: 40vh;
+    width: 100%;
+}
+
 .splash{
     position: absolute;
     text-align: center;
