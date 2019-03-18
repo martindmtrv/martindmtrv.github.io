@@ -29,8 +29,6 @@ martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, 
 })
 
 function updateTable(test){
-  
-
   if (test.statusText == "success"){
     description = test.responseText;
     description = $(description).find("p");
