@@ -1,16 +1,16 @@
+var test;
+var updatedStr = "";
+var projects = 0;
+var description = "";
 var martGit = new Gh3.User('martindmtrv');
-
 var martRepos = new Gh3.Repositories(martGit);
+
 martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, res) {
   if(err) {
     throw "outch ..."
   }
-
-  var updatedStr = "";
-  var test;
-  var projects = 0;
-  var description = "";
   for (i = 0; i<martRepos.repositories.length; i++){
+    
     test = $.ajax(
       {
           type: "get",
@@ -29,6 +29,8 @@ martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, 
 })
 
 function updateTable(test){
+  
+
   if (test.statusText == "success"){
     description = test.responseText;
     description = $(description).find("p");
