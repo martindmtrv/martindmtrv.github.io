@@ -1,34 +1,32 @@
-function main(){
-  var martGit = new Gh3.User('martindmtrv');
+var martGit = new Gh3.User('martindmtrv');
 
-  var martRepos = new Gh3.Repositories(martGit);
-  martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, res) {
-    if(err) {
-      throw "outch ..."
-    }
+var martRepos = new Gh3.Repositories(martGit);
+martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, res) {
+  if(err) {
+    throw "outch ..."
+  }
 
-    var updatedStr = "";
-    var test;
-    var projects = 0;
-    var description = "";
-    for (i = 0; i<martRepos.repositories.length; i++){
-      test = $.ajax(
-        {
-            type: "get",
-            url: martRepos.repositories[i].name,
-            cache: false,
-            statusCode: {
-                          404: function ()
-                             {
-                                console.log("404");
-                             }
-                         },
-            async: true,
-            callback: updateTable(this)
-        });
-    }
-  })
-}
+  var updatedStr = "";
+  var test;
+  var projects = 0;
+  var description = "";
+  for (i = 0; i<martRepos.repositories.length; i++){
+    test = $.ajax(
+      {
+          type: "get",
+          url: martRepos.repositories[i].name,
+          cache: false,
+          statusCode: {
+                        404: function ()
+                            {
+                              console.log("404");
+                            }
+                        },
+          async: true,
+          callback: updateTable(this)
+      });
+  }
+})
 
 function updateTable(test){
   if (test.statusText == "success"){
@@ -56,5 +54,3 @@ function updateTable(test){
     document.getElementById("response").innerHTML = updatedStr;
   }
 }
-
-main();
