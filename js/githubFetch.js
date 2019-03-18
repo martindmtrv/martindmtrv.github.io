@@ -10,7 +10,6 @@ martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, 
     throw "outch ..."
   }
   for (i = 0; i<martRepos.repositories.length; i++){
-    
     test = $.ajax(
       {
           type: "get",
@@ -40,14 +39,14 @@ martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, 
     else{
       document.getElementById("other").innerHTML += "<p>" + martRepos.repositories[i].name + "<br><br></p>";
     }
-    if (projects >= 3){
-      document.getElementById("response").innerHTML = updatedStr;
-    } else{
-      for (var x = projects; x < 3; x++){
-        updatedStr += "<div class = \"column\"></div>"
-      }
-      document.getElementById("response").innerHTML = updatedStr;
+  }
+  if (projects >= 3){
+    document.getElementById("response").innerHTML = updatedStr;
+  } else{
+    for (var x = projects; x < 3; x++){
+      updatedStr += "<div class = \"column\"></div>"
     }
+    document.getElementById("response").innerHTML = updatedStr;
   }
   
 });
