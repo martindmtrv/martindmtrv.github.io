@@ -21,9 +21,7 @@ martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, 
                         },
           async: true,
           error: function (jqXHR, status, err) {
-            alert("Local error callback.");
-            console.log(jqXHR.requestURL);
-            console.log(status);
+            document.getElementById("other").innerHTML += "<p>" + jqXHR.requestURL + "<br><br></p>";
           },
           success: function(data){
             var description;
@@ -39,7 +37,7 @@ martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, 
                 description = description[0].innerText;
             }
 
-            if (name != "martindmtrv.github.io" && name != "spaghetti-code"){
+            if (name != "Martin Dimitrov"){
                 updatedStr += "<div class = \"column\"><h4>" + name + "</h4><p>"+ description + "</p><a href=\"https://github.com/martindmtrv/"+ name  + "\">View on GitHub</a></div>";
             } 
             if ($('.column').length < 3){
