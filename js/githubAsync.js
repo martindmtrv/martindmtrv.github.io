@@ -19,8 +19,8 @@ martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, 
                             }
                         },
           async: true,
-          success: function(){
-            console.log("found ");
+          success: function(data){
+            console.log("found " + data);
             var description;
             var updatedStr = "";
             var name;
