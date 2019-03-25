@@ -20,6 +20,7 @@ martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, 
                         },
           async: true,
           callback: function(){
+            console.log("found "+martRepos.repositories[i].name);
             var description;
             var updatedStr = "";
             if (test.statusText == "success"){
