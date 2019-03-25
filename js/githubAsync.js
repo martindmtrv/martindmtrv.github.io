@@ -1,4 +1,4 @@
-var test;
+var test = [];
 var martGit = new Gh3.User('martindmtrv');
 var martRepos = new Gh3.Repositories(martGit);
 
@@ -7,7 +7,7 @@ martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, 
     throw "outch ..."
   }
   for (i = 0; i<martRepos.repositories.length; i++){
-    test = $.ajax(
+    test.push($.ajax(
     {
           type: "get",
           url: martRepos.repositories[i].name,
@@ -45,6 +45,6 @@ martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, 
                 document.getElementById("response").innerHTML += updatedStr;
               }
           }
-    });}       
+    }));}       
 });
 
