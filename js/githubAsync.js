@@ -21,16 +21,16 @@ martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, 
           async: true,
           error: function (jqXHR, status, err) {
             alert("Local error callback.");
-            console.log(jqXHR.responseURL);
+            console.log(jqXHR);
+            console.log(status);
           },
           success: function(data){
-            console.log("found " + data);
             var description;
             var updatedStr = "";
             var name;
             
             description = $(data).find("p");
-            name = $(data).find("h1");
+            name = $(data).find("h1")[0].innerText;
 
             if (description[0] === undefined){
                 description = "A cool project description";
