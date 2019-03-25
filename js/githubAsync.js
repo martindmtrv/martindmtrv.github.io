@@ -12,6 +12,7 @@ martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, 
           type: "get",
           url: martRepos.repositories[i].name,
           cache: false,
+          beforeSend: function(jqxhr, settings) { jqxhr.requestURL = martRepos.repositories[i].name; },
           statusCode: {
                         404: function ()
                             {
@@ -21,7 +22,7 @@ martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, 
           async: true,
           error: function (jqXHR, status, err) {
             alert("Local error callback.");
-            console.log(jqXHR);
+            console.log(jqXHR.requestURL);
             console.log(status);
           },
           success: function(data){
