@@ -19,8 +19,9 @@ martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, 
                             }
                         },
           async: true,
-          callback: function(){
-            document.getElementById("other").innerHTML += "<p>" + name + "<br><br></p>";
+          error: function (jqXHR, status, err) {
+            alert("Local error callback.");
+            console.log(jqXHR.responseURL);
           },
           success: function(data){
             console.log("found " + data);
