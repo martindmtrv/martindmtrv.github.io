@@ -14,10 +14,10 @@ function auth(code){
   console.log(code);
 
   if (typeof code == "undefined"){
-    window.open("https://login.questrade.com/oauth2/authorize?client_id=TAmdaaZ2WI35zAIAGCwQWE8uNc_k9A&response_type=code&redirect_uri=https://martindmtrv.github.io/callback.html",'_parent');
+    window.replace("https://login.questrade.com/oauth2/authorize?client_id="+client_id+"&response_type=code&redirect_uri=https://martindmtrv.github.io/callback.html",'_parent');
   } else{
       $.get({
-        url: "https://login.questrade.com/oauth2/token?client_id="+client_id+"&code="+code+"grant_type=authorization_code&redirect_uri=https://martindmtrv.github.io/callback.html",
+        url: "https://login.questrade.com/oauth2/token?client_id="+client_id+"&code="+code+"&grant_type=authorization_code&redirect_uri=https://martindmtrv.github.io/callback.html",
         dataType: 'json',
         success: function(data){
           const AUTH_HEADERS = data;
