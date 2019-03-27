@@ -219,6 +219,11 @@ span {
     color: black;
 }
 
+.other a{
+    text-decoration: none;
+    color: black;
+}
+
 /* navbar */
 .topnav {
     z-index: 9;
