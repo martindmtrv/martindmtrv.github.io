@@ -21,7 +21,7 @@ martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, 
                         },
           async: true,
           error: function (jqXHR, status, err) {
-            document.getElementById("other").innerHTML += "<a href=\"https://github.com/martindmtrv/"+jqXHR.requestURL+ "\">"+jqXHR.requestURL+"</a>";
+            document.getElementById("other").innerHTML += "<a href=\"https://github.com/martindmtrv/"+jqXHR.requestURL+ "\">"+jqXHR.requestURL+"</a><br>";
           },
           success: function(data){
             var description;
@@ -43,7 +43,7 @@ martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, 
             if ($('.column').length < 3){
             document.getElementById("response").innerHTML += updatedStr;
             } else{
-              document.getElementById("other").innerHTML += "<p><a href=\"https://github.com/martindmtrv/"+name+ "\">"+name+"</a></p>";
+              document.getElementById("other").innerHTML += "<a href=\"https://github.com/martindmtrv/"+name+ "\">"+name+"</a><br>";
             }
           }
     }));}       
