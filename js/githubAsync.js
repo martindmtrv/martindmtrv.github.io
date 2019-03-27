@@ -40,11 +40,8 @@ martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, 
             if (name != "Martin Dimitrov"){
                 updatedStr += "<div class = \"column\"><h4>" + name + "</h4><p>"+ description + "</p><a href=\"https://github.com/martindmtrv/"+ name  + "\">View on GitHub</a></div>";
             } 
-            if ($('.column').length < 3){
-            document.getElementById("response").innerHTML += updatedStr;
-            } else{
-              document.getElementById("other").innerHTML += "<a href=\"https://github.com/martindmtrv/"+name+ "\">"+name+"</a><br>";
-            }
+            var old = document.getElementById("response").innerHTML;
+            document.getElementById("response").innerHTML = updatedStr + old;
           }
     }));}       
 });

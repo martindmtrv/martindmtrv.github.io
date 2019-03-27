@@ -285,3 +285,32 @@ span {
         text-align: left;
     }
 }
+
+/* view more */
+.sidebar-box {
+    float: left; 
+    width: 100%;
+    margin: 0 20px 0 0;
+    max-height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+    .sidebar-box {
+        max-height: 1050px;   
+    }
+}
+
+.sidebar-box .read-more { 
+    position: absolute; 
+    bottom: 0; left: 0;
+    width: 100%; 
+    text-align: center; 
+    margin: 0; 
+    padding: 30px 0 30px 0; 
+    
+    /* "transparent" only works here because == rgba(0,0,0,0) */ 
+    background-image: -moz-linear-gradient(top, transparent, grey);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, transparent),color-stop(1, grey));
+}
