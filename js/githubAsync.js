@@ -21,7 +21,7 @@ martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, 
                         },
           async: true,
           error: function (jqXHR, status, err) {
-            document.getElementById("other").innerHTML += "<p>" + jqXHR.requestURL + "<br><br></p>";
+            document.getElementById("other").innerHTML += "<p>" + jqXHR.requestURL + "</p>";
           },
           success: function(data){
             var description;
@@ -42,6 +42,8 @@ martRepos.fetch({page:1, per_page:10, direction : "asc"},"next", function (err, 
             } 
             if ($('.column').length < 3){
             document.getElementById("response").innerHTML += updatedStr;
+            } else{
+              document.getElementById("other").innerHTML += "<p>" + name + "</p>";
             }
           }
     }));}       
