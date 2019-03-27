@@ -2,12 +2,10 @@
 function reveal() {
 		
     var $el, $ps, $up, totalHeight;
-
-    // IE 7 doesn't even get this far. I didn't feel like dicking with it.
             
     totalHeight = 750;
 
-    $a = $('.sidebar-box a');
+    $a = $('.sidebar-box .button');
     $p  = $a.parent();
     var width = $(window).width();
     $up = $p.parent();
@@ -33,6 +31,4 @@ function reveal() {
     // prevent jump-down
     return false;
             
-    
-
 }
