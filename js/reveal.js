@@ -1,34 +1,22 @@
-// DOM Ready
-function reveal() {
+$(function(){
+    $(".button").click(function() {    
 		
-    var $el, $ps, $up, totalHeight;
-            
-    totalHeight = 750;
+        var $a, $p, $up, $divs;
 
-    $a = $('.sidebar-box .button');
-    $p  = $a.parent();
-    var width = $(window).width();
-    $up = $p.parent();
-    $divs = $up.find("div");
-    
-    if (width < 800){
-        totalHeight = ($divs.length-1) * 500;
-    }
-                
-    $up
-        .css({
-            // Set height to prevent instant jumpdown when max height is removed
-            "height": $up.height()+50,
-            "max-height": 9999
-        })
-        .animate({
-            "height": totalHeight
-        });
-    
-    // fade out read-more
-    $p.fadeOut();
-    
-    // prevent jump-down
-    return false;
-            
-}
+        $a = $('.sidebar-box .button');
+        $p  = $a.parent();
+        $up = $p.parent();
+        $divs = $up.find("div");
+                    
+        $up
+            .animate({
+                "max-height": 4*1000
+            });
+        
+        // fade out read-more
+        $p.fadeOut();
+        
+        // prevent jump-down
+        return false;        
+    });
+});
