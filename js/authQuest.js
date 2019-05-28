@@ -14,8 +14,8 @@ function auth(code){
   console.log(code);
 
   if (typeof code == "undefined"){
-    window.replace("https://login.questrade.com/oauth2/authorize?client_id="+client_id+"&response_type=code&redirect_uri=https://martindmtrv.github.io/callback.html",'_parent');
+    window.location.href = `https://login.questrade.com/oauth2/authorize?client_id=${client_id}&response_type=code&redirect_uri=https://martindmtrv.github.io/callback.html`;
   } else{
-      window.replace(`http://localhost:3000/login?code${code}`);
+    window.location.href = `http://localhost:3000/login?code${code}`;
   }
 }
