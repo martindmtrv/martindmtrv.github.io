@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: martindmtrv.github.io
+Token: 5a44ff05337d89c90f22d50c5554f74b52f6789d8d0d20cd006d2ba650fef2b0
